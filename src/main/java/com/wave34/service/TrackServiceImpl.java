@@ -52,22 +52,22 @@ public class TrackServiceImpl implements ITrackService {
 
     @Override
     public List<Track> fetchTrackByName(String trackName) {
-        return (List<Track>) trackRepository.findBytrackName(trackName);
+        return (List<Track>) trackRepository.findByTrackName(trackName);
     }
 
     @Override
-    public List<Track> fetchTrackByRating(int trackRating) {
-        return (List<Track>) trackRepository.findBytrackRating(trackRating);
+    public List<Track> fetchTrackByRating(double trackRating) {
+        return (List<Track>) trackRepository.findByTrackRating(trackRating);
     }
 
 //    @Override
 //    public List<Track> fetchAllTrackByRatingBetween(int start, int end) {
-//        return  (List<Track>) trackRepository.findBytrackRatingBetween(start, end);
+//        return  (List<Track>) trackRepository.findByTrackRatingBetween(start, end);
 //    }
 
     @Override
     public List<Track> fetchTrackArtist(String trackArtist) {
-        return (List<Track>) trackRepository.findBytrackArtist(trackArtist);
+        return (List<Track>) trackRepository.findByTrackArtist(trackArtist);
     }
 
 //    @Override

@@ -8,14 +8,14 @@ import java.util.List;
 
 @Repository
 public interface TrackRepository extends JpaRepository<Track, Integer> {
-    List<Track> findBytrackName(String trackName);
+    List<Track> findByTrackName(String trackName);
 
-    List<Track> findBytrackRating(int trackRating);
+    List<Track> findByTrackRating(double trackRating);
 
-    //List<Track> findBytrackRatingBetween(int start, int end);
-    List<Track> findBytrackArtist(String trackArtist);
+    //List<Track> findByTrackRatingBetween(int start, int end);
+    List<Track> findByTrackArtist(String trackArtist);
 
-//List<Track> findBytrackNameOrderByNameDesc(String trackName);
+//List<Track> findByTrackNameOrderByNameDesc(String trackName);
 
 
 }

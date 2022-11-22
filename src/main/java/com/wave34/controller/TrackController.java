@@ -34,34 +34,34 @@ public class TrackController {
         return new ResponseEntity<>(itrackService.fetchAllTrack(), HttpStatus.OK);
     }
 
-    @DeleteMapping("/deleteTrack/{id}")
+    @DeleteMapping("/deleteTrack/{tid}")
     public ResponseEntity<?> deleteFunction(@PathVariable int tid) {
         itrackService.deleteTrack(tid);
         return new ResponseEntity<>("Track Record Deleted", HttpStatus.OK);
     }
 
-    @GetMapping("/getTrackById/{id}")
+    @GetMapping("/getTrackById/{tid}")
     public ResponseEntity<?> getProductByIdFunction(@PathVariable int tid) {
         return new ResponseEntity<>(itrackService.getTrackById(tid), HttpStatus.OK);
     }
 
-    @PutMapping("/updateById/{id}")
+    @PutMapping("/updateById/{tid}")
     public ResponseEntity<?> updateFunction(@PathVariable int tid, @RequestBody Track track) {
         itrackService.updateTrack(tid, track);
         return new ResponseEntity<>("Product Record Updated", HttpStatus.OK);
     }
 
-    @GetMapping("/fetchTrackByName/{name}")
+    @GetMapping("/fetchTrackByName/{trackName}")
     public ResponseEntity<?> fetchByName(@PathVariable String trackName) {
         return new ResponseEntity<>(itrackService.fetchTrackByName(trackName), HttpStatus.OK);
     }
 
-    @GetMapping("/fetchTrackByRating/{rating}")
-    public ResponseEntity<?> fetchByRating(@PathVariable int trackRating) {
+    @GetMapping("/fetchTrackByRating/{trackRating}")
+    public ResponseEntity<?> fetchByRating(@PathVariable double trackRating) {
         return new ResponseEntity<>(itrackService.fetchTrackByRating(trackRating), HttpStatus.OK);
     }
 
-    @GetMapping("/fetchTrackByArtist/{name}")
+    @GetMapping("/fetchTrackByArtist/{trackArtist}")
     public ResponseEntity<?> fetchByRating(@PathVariable String trackArtist) {
         return new ResponseEntity<>(itrackService.fetchTrackArtist(trackArtist), HttpStatus.OK);
     }

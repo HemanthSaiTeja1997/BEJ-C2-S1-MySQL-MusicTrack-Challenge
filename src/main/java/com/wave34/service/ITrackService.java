@@ -19,7 +19,7 @@ public interface ITrackService {
 
     List<Track> fetchTrackByName(String trackName);
 
-    List<Track> fetchTrackByRating(int trackRating);
+    List<Track> fetchTrackByRating(double trackRating);
 
     //   List<Track> fetchAllTrackByRatingBetween(int start, int end);
     List<Track> fetchTrackArtist(String trackArtist);
